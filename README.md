@@ -1,15 +1,21 @@
 # MoreStorageStack
 
-A lightweight Fabric mod for Minecraft 26.1.1 that allows you to configure item max stack sizes.
+A lightweight Fabric mod for Minecraft 26.1.1 that allows you to configure item max stack sizes with native in-game controls and instant presets.
 
 ## Features
-- **Configurable Stack Sizes:** Customize item stack limits via `config/morestoragestack.properties` (`max_stack_size=64` by default).
-- **Bulk Presets:** Officially supports configuring stack tiers from 64 up to 4096 (with Safe [127] and Bulk [4096] tiers).
-- **Smart Scaling:** Items whose vanilla limit is already at or above the configured value keep their vanilla limit, while items with lower thresholds (such as ender pearls, snowballs, and eggs) are raised to the configured stack size.
+- **In-Game Preset GUI:** Access an in-game settings screen with 8 instant presets: `64`, `127`, `128`, `256`, `512`, `1024`, `2048`, and `4096`.
+- **Configurable Keybind:** Fully customizable hotkey (unbound by default, configurable in `Options` -> `Controls` -> `Key Binds`).
+- **Mod Menu Support:** Integrates seamlessly with Mod Menu—open settings directly from the in-game mod list.
+- **Smart Scaling:** Items whose vanilla limit is already at or above the configured value keep their limit, while items with lower thresholds (such as ender pearls, snowballs, and eggs) are raised to the selected stack size.
 - **Tool & Weapon Protection:** Unstackable items (tools, weapons, armor) with a max count of 1 remain unstackable to prevent gameplay and durability issues.
+- **Zero Overhead:** Completely native vanilla GUI widgets with no extra library dependencies required.
+
+## Presets
+- **SAFE Tier (64 – 127):** Stable, recommended for vanilla-like survival, servers, and modpacks.
+- **BULK Tier (128 – 4096):** High-capacity stack sizes for massive storage systems.
 
 ## Configuration
-The configuration file is automatically created at `config/morestoragestack.properties` upon first launch:
+Settings can be changed via the in-game GUI or directly in `config/morestoragestack.properties`:
 ```properties
 max_stack_size=64
 ```

@@ -1,6 +1,7 @@
 package com.ruinerpie.morestoragestack.mixin;
 
 import com.ruinerpie.morestoragestack.StorageConfig;
+import com.ruinerpie.morestoragestack.preset.StackPreset;
 import net.minecraft.world.Container;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,9 +15,8 @@ public interface ContainerMixin {
     private void morestoragestack$overrideMaxStackSize(CallbackInfoReturnable<Integer> cir) {
         int original = cir.getReturnValue();
         int userMax = StorageConfig.getMaxStackSize();
-        int effective = Math.min(userMax, 127);
+        int effective = Math.min(userMax, StackPreset.byteSafeMax());
 
-        // Only raise, never lower
         if (original < effective) {
             cir.setReturnValue(effective);
         }

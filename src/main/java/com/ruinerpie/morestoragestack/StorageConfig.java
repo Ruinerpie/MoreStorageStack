@@ -63,11 +63,32 @@ public final class StorageConfig {
             try (var r = Files.newBufferedReader(file)) { 
                 p.load(r); 
             }
-            int raw = Integer.parseInt(p.getProperty("max_stack_size", "64"));
+            String rawStr = p.getProperty("max_stack_size", "64");
+            int raw = Integer.parseInt(rawStr != null ? rawStr.trim() : "64");
             setMaxStackSize(raw);
         } catch (Exception e) {
             LOG.error("Failed to load morestoragestack config, using default 64", e);
             setMaxStackSize(64);
+        }
+    }
+
+    public static void save() {
+        Path file = FabricLoader.getInstance()
+                .getConfigDir()
+                .resolve("morestoragestack.properties");
+        try {
+            Files.createDirectories(file.getParent());
+            Files.writeString(file,
+                    "# MoreStorageStack configuration\n" +
+                    "#\n" +
+                    "# Range: 64 to 4096\n" +
+                    "#   SAFE preset: 64 - 127   (stable, recommended)\n" +
+                    "#   BULK preset: 128 - 4096 (advanced, read README first)\n" +
+                    "#\n" +
+                    "max_stack_size=" + maxStackSize + "\n");
+            LOG.info("Saved max_stack_size = {}", maxStackSize);
+        } catch (Exception e) {
+            LOG.error("Failed to save config", e);
         }
     }
 }

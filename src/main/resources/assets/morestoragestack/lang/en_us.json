@@ -1,4 +1,6 @@
 {
   "modmenu.nameTranslation.morestoragestack": "MoreStorageStack",
-  "modmenu.descriptionTranslation.morestoragestack": "Customizable stack size modifier."
+  "modmenu.descriptionTranslation.morestoragestack": "Customizable stack size modifier.",
+  "key.morestoragestack.open": "Open MoreStorageStack Config",
+  "category.morestoragestack": "MoreStorageStack"
 }

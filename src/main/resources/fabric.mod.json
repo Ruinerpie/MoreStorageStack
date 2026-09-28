@@ -16,6 +16,12 @@
   "entrypoints": {
     "main": [
       "com.ruinerpie.morestoragestack.MoreStorageStackMod"
+    ],
+    "client": [
+      "com.ruinerpie.morestoragestack.client.MoreStorageStackClient"
+    ],
+    "modmenu": [
+      "com.ruinerpie.morestoragestack.client.MoreStorageStackModMenu"
     ]
   },
   "mixins": [
