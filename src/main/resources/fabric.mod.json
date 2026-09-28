@@ -3,7 +3,15 @@
   "id": "morestoragestack",
   "version": "${version}",
   "name": "MoreStorageStack",
-  "description": "Customizable stack size modifier.",
+  "description": "Customizable stack size modifier. Items below the configured limit are raised; items at or above keep their vanilla limit. Unstackable items stay unstackable.",
+  "authors": [
+    "Ruinerpie"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/morestoragestack",
+    "sources": "https://github.com/Ruinerpie/MoreStorageStack"
+  },
+  "license": "MIT",
   "icon": "assets/morestoragestack/icon.png",
   "environment": "*",
   "entrypoints": {

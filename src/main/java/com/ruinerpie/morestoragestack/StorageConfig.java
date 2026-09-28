@@ -1,8 +1,11 @@
 package com.ruinerpie.morestoragestack;
 
+import com.ruinerpie.morestoragestack.preset.PresetDetector;
+import com.ruinerpie.morestoragestack.preset.StackPreset;
 import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
@@ -10,9 +13,10 @@ import java.util.Properties;
 public final class StorageConfig {
     private StorageConfig() {}
 
-    private static final int MIN = 1;
+    private static final int MIN = 64;
     private static final int MAX = 4096; 
     private static volatile int maxStackSize = 64;
+    private static volatile StackPreset activePreset = StackPreset.SAFE;
 
     private static final Logger LOG = LoggerFactory.getLogger("morestoragestack");
 
@@ -26,8 +30,13 @@ public final class StorageConfig {
         return maxStackSize;
     }
 
+    public static StackPreset getActivePreset() {
+        return activePreset;
+    }
+
     public static void setMaxStackSize(int value) {
         maxStackSize = clamp(value);
+        activePreset = PresetDetector.detect(maxStackSize);
     }
 
     public static int clamp(int value) {
@@ -39,7 +48,14 @@ public final class StorageConfig {
         try {
             if (Files.notExists(file)) {
                 Files.createDirectories(file.getParent());
-                Files.writeString(file, "max_stack_size=64\n");
+                Files.writeString(file,
+                        "# MoreStorageStack configuration\n" +
+                        "#\n" +
+                        "# Range: 64 to 4096\n" +
+                        "#   SAFE preset: 64 - 127   (stable, recommended)\n" +
+                        "#   BULK preset: 128 - 4096 (advanced, read README first)\n" +
+                        "#\n" +
+                        "max_stack_size=64\n");
                 setMaxStackSize(64);
                 return;
             }
