@@ -27,7 +27,6 @@ public abstract class ItemStackMixin {
         if (original <= 1) return 1;
 
         int userMax = StorageConfig.getMaxStackSize();
-        int effective = Math.min(userMax, StackPreset.byteSafeMax());
-        return Math.max(original, effective);
+        return Math.max(original, userMax);
     }
 }

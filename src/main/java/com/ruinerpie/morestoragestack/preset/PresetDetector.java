@@ -10,12 +10,7 @@ public final class PresetDetector {
     public static StackPreset detect(int value) {
         StackPreset preset = StackPreset.fromValue(value);
         if (preset == StackPreset.BULK) {
-            LOG.warn("═══════════════════════════════════════════════");
-            LOG.warn(" BULK preset active — max_stack_size = {}", value);
-            LOG.warn(" Values above {} exceed Minecraft's byte storage.", StackPreset.byteSafeMax());
-            LOG.warn(" The mod caps real storage at {} to protect your save.", StackPreset.byteSafeMax());
-            LOG.warn(" Both client and server must use the same value.");
-            LOG.warn("═══════════════════════════════════════════════");
+            LOG.warn("BULK preset active — max_stack_size = {}", value);
         } else {
             LOG.info("SAFE preset active — max_stack_size = {}", value);
         }

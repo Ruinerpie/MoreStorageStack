@@ -89,8 +89,8 @@ public class MoreStorageStackScreen extends Screen {
         extractor.centeredText(this.font, preset, cx, cy - 56, 0xFFFFFF);
 
         String hint = safe
-                ? "Stable. Recommended for survival and servers."
-                : "Advanced. Real storage caps at 127 for save safety.";
+                ? "SAFE: Recommended for stable survival & servers."
+                : "BULK: High-capacity stack size (128 - 4096).";
         extractor.centeredText(this.font,
                 Component.literal(hint).withStyle(ChatFormatting.GRAY),
                 cx, cy + 34, 0xAAAAAA);

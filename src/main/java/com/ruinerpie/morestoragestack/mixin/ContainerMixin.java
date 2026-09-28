@@ -15,10 +15,9 @@ public interface ContainerMixin {
     private void morestoragestack$overrideMaxStackSize(CallbackInfoReturnable<Integer> cir) {
         int original = cir.getReturnValue();
         int userMax = StorageConfig.getMaxStackSize();
-        int effective = Math.min(userMax, StackPreset.byteSafeMax());
 
-        if (original < effective) {
-            cir.setReturnValue(effective);
+        if (original < userMax) {
+            cir.setReturnValue(userMax);
         }
     }
 }

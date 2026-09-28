@@ -3,7 +3,7 @@
   "id": "morestoragestack",
   "version": "${version}",
   "name": "MoreStorageStack",
-  "description": "Customizable stack size modifier. Items below the configured limit are raised; items at or above keep their vanilla limit. Unstackable items stay unstackable.",
+  "description": "Customizable stack size modifier. Increases item stack limits (up to 4096) while protecting tools and weapons. Open config in-game via Mod Menu or controls keybind.",
   "authors": [
     "Ruinerpie"
   ],
