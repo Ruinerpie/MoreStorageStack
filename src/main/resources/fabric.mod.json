@@ -1,24 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "flexiblestorage",
+  "id": "morestoragestack",
   "version": "${version}",
-  "name": "Flexible Storage",
+  "name": "MoreStorageStack",
   "description": "Customizable stack size modifier.",
-  "icon": "assets/flexiblestorage/icon.png",
+  "icon": "assets/morestoragestack/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.flexiblestorage.FlexibleStorageMod"
+      "com.ruinerpie.morestoragestack.MoreStorageStackMod"
     ]
   },
   "mixins": [
-    "flexiblestorage.mixins.json"
+    "morestoragestack.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.16.0",
     "minecraft": "~26.1.1",
     "java": ">=25",
-    "fabric-api": "*",
-    "mixinextras": ">=0.4.0"
+    "fabric-api": "*"
   }
 }
