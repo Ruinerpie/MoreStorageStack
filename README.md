@@ -20,3 +20,7 @@ max_stack_size=64
 - Fabric Loader `>=0.16.0`
 - Fabric API
 - Java 25+
+
+## License
+All Rights Reserved (ARR). Copyright (c) 2026 Ruinerpie.  
+This mod is proprietary software intended for gameplay. You may not decompile, redistribute, modify, or reuse this mod or its source code without explicit written permission.

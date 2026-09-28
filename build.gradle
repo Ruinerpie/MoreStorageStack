@@ -14,7 +14,6 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(25)
     }
-    withSourcesJar()
 }
 
 repositories {
@@ -33,6 +32,13 @@ dependencies {
     // MixinExtras
     implementation "io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}"
     include "io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}"
+}
+
+tasks.withType(JavaExec).configureEach {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+    jvmArgs += ['-XX:+IgnoreUnrecognizedVMOptions']
 }
 
 processResources {

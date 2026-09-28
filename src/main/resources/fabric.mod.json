@@ -8,10 +8,9 @@
     "Ruinerpie"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/morestoragestack",
-    "sources": "https://github.com/Ruinerpie/MoreStorageStack"
+    "homepage": "https://modrinth.com/mod/morestoragestack"
   },
-  "license": "MIT",
+  "license": "All Rights Reserved",
   "icon": "assets/morestoragestack/icon.png",
   "environment": "*",
   "entrypoints": {
