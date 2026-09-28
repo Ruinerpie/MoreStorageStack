@@ -11,7 +11,7 @@ public abstract class ItemStackMixin {
 
     private static final int BYTE_SAFE_MAX = 127;
 
-    @ModifyReturnValue(method = "getMaxStackSize", at = @At("RETURN"))
+    @ModifyReturnValue(method = "getMaxCount", at = @At("RETURN"))
     private int morestoragestack$scale(int original) {
         if (original <= 1) return 1;
 
