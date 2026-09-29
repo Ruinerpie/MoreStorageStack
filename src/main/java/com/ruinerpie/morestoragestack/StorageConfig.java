@@ -49,12 +49,8 @@ public final class StorageConfig {
             if (Files.notExists(file)) {
                 Files.createDirectories(file.getParent());
                 Files.writeString(file,
-                        "# MoreStorageStack configuration\n" +
-                        "#\n" +
-                        "# Range: 64 to 4096\n" +
-                        "#   SAFE preset: 64 - 127   (stable, recommended)\n" +
-                        "#   BULK preset: 128 - 4096 (advanced, read README first)\n" +
-                        "#\n" +
+                        "# MoreStorageStack Configuration\n" +
+                        "# max_stack_size: 64 to 4096\n" +
                         "max_stack_size=64\n");
                 setMaxStackSize(64);
                 return;
@@ -79,12 +75,8 @@ public final class StorageConfig {
         try {
             Files.createDirectories(file.getParent());
             Files.writeString(file,
-                    "# MoreStorageStack configuration\n" +
-                    "#\n" +
-                    "# Range: 64 to 4096\n" +
-                    "#   SAFE preset: 64 - 127   (stable, recommended)\n" +
-                    "#   BULK preset: 128 - 4096 (advanced, read README first)\n" +
-                    "#\n" +
+                    "# MoreStorageStack Configuration\n" +
+                    "# max_stack_size: 64 to 4096\n" +
                     "max_stack_size=" + maxStackSize + "\n");
             LOG.info("Saved max_stack_size = {}", maxStackSize);
         } catch (Exception e) {

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.ruinerpie.morestoragestack.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ItemStackMixin",
+    "ContainerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
