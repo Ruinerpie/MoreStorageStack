@@ -30,7 +30,7 @@ max_stack_size=64
 - Java 25+
 
 ## Screenshots
-*(In-game GUI screenshot coming soon)*
+Screenshots are available on the [Modrinth project page](https://modrinth.com/mod/morestoragestack).
 
 ## License
-ARR (All Rights Reserved) — Copyright (c) 2026 Ruinerpie.
+All Rights Reserved (ARR) — Copyright (c) 2026 Ruinerpie.

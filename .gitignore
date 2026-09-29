@@ -1,22 +1,18 @@
-# Build & Binaries
+# Build & binaries
 .gradle/
 build/
 bin/
 out/
 
-# IntelliJ IDEA
+# IDE files
 .idea/
 *.iml
 *.ipr
 *.iws
-
-# Eclipse
 .eclipse/
 .settings/
 .classpath
 .project
-
-# VSCode
 .vscode/
 
 # Minecraft run directory

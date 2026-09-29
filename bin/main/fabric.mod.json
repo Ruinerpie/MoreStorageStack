@@ -10,7 +10,7 @@
   "contact": {
     "homepage": "https://modrinth.com/mod/morestoragestack"
   },
-  "license": "ARR",
+  "license": "All-Rights-Reserved",
   "icon": "assets/morestoragestack/icon.png",
   "environment": "*",
   "entrypoints": {

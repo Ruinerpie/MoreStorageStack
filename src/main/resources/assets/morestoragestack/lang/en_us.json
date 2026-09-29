@@ -1,6 +1,6 @@
 {
   "modmenu.nameTranslation.morestoragestack": "MoreStorageStack",
   "modmenu.descriptionTranslation.morestoragestack": "Lets you configure item stack sizes up to 4096 with an in-game config menu.",
-  "key.morestoragestack.open": "Open MoreStorageStack Config",
+  "key.morestoragestack.open": "Open MoreStorageStack Settings",
   "category.morestoragestack": "MoreStorageStack"
 }
