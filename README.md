@@ -1,17 +1,36 @@
-# More Storage Stack
+# MoreStorageStack
 
-A simple Fabric mod for Minecraft 26.1.1 that lets you configure item stack sizes up to 4096 with an in-game config menu.
+A Fabric mod for Minecraft 26.1.1 that lets you adjust maximum item stack sizes up to 4096 in-game.
 
 ## Features
-- Increase stack limits for items (Ender Pearls, Eggs, Snowballs, Blocks, etc.) up to 4096.
-- Presets: 64, 127, 128, 256, 512, 1024, 2048, 4096.
+- Increase stack limits for stackable items (Ender Pearls, blocks, resources) up to 4096.
+- 8 instant presets: `64`, `127`, `128`, `256`, `512`, `1024`, `2048`, and `4096`.
 - Tools, weapons, and armor stay unstackable (stack size 1) to prevent gameplay issues.
-- In-game config screen (accessible via Mod Menu or a custom keybind).
+- In-game GUI config screen.
 
-## Usage
-Open the config screen in-game via **Mod Menu** or set a keybind under **Options -> Controls -> Key Binds**. Select your preferred stack size preset and save.
+## How to Use
+Access the config screen in-game via **Mod Menu** or assign a hotkey under **Options -> Controls -> Key Binds -> MoreStorageStack**.
 
-> **Note:** Needs to be installed on both client and server for server play so stack counts stay synchronized.
+- **SAFE (64 – 127)**: Recommended for standard survival gameplay and server compatibility.
+- **BULK (128 – 4096)**: High-capacity stack sizes for large storage setups.
+
+## Configuration
+Settings can be changed in-game or in `config/morestoragestack.properties`:
+
+```properties
+max_stack_size=64
+```
+
+> **Note:** Both client and server must have the mod installed with the same `max_stack_size` for proper inventory synchronization.
+
+## Requirements
+- Minecraft `26.1.1`
+- Fabric Loader `>=0.16.0`
+- Fabric API
+- Java 25+
+
+## Screenshots
+*(In-game GUI screenshot coming soon)*
 
 ## License
-All Rights Reserved.
+ARR (All Rights Reserved) — Copyright (c) 2026 Ruinerpie.
