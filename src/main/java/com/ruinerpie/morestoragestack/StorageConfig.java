@@ -13,8 +13,8 @@ import java.util.Properties;
 public final class StorageConfig {
     private StorageConfig() {}
 
-    private static final int MIN = 64;
-    private static final int MAX = 4096; 
+    private static final int MIN = StackPreset.SAFE.min();
+    private static final int MAX = StackPreset.BULK.max();
     private static volatile int maxStackSize = 64;
     private static volatile StackPreset activePreset = StackPreset.SAFE;
 

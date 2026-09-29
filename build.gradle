@@ -72,6 +72,5 @@ publishing {
         }
     }
     repositories {
-        // Add publishing repositories here if needed
     }
 }
